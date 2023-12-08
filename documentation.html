@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <title>My Javascript Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+      
+    <body>
+        <!--NAVBAR-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="home.html">JOHN ROBERTSON GAMES</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Javascript Elements
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="element1.html">Element 1</a></li>
+                      <li><a class="dropdown-item" href="element2.html">Element 2</a></li>
+                      <li><a class="dropdown-item" href="element3.html">Element 3</a></li>
+                      <li><a class="dropdown-item" href="element4.html">Element 4</a></li>
+                      <li><a class="dropdown-item" href="element5.html">Element 5</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="documentation.html">Documentation</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <!--HEADER AND OPENING PARAGRAPH-->
+        <div class="container-sm text-center">
+            <h1>ELEMENT 5 DOCUMENTATION</h1>
+        </div>
+        <div class="container-sm text-left">
+          
+          <p>For my fifth element, I have created a short game that involves the player controlling a character to push a ball around obstacles and into a goal. The element consists of three scenes:
+            <br>1. Main Menu
+            <br>2. Gameplay
+            <br>3. Win Screen</p>
+            <br><h1>Menu Scene</h1>
+            <p>When the element is first opened, the Main Menu scene is displayed.
+              This displays the game's name, plus a short description of what the
+              player has to do. Below this description is the button to begin the game.
+              There is also an acoustic drum soundtrack that plays in the background,
+              and will loop for as long as this scene is open.</p>
+              <img src="public/docpics/music.png" class="d-block w-50">
+              <p>Pressing the 'Press to start!' button will load the Gameplay scene.</p>
+              <img src="public/docpics/menupic.png" class="d-block w-50">
+              <br>
+              <br>
+              <h1>Gameplay Scene</h1>
+              <p>For my gameplay scene, I made a simple physics-based game where the player controls
+                a character and has to push a ball around a small arena, avoiding obstacles and
+                getting the ball into a goal.</p>
+              <img src="public/docpics/gameplay.png" class="d-block w-100">
+              <br>
+              <br>
+              <h2>Audio</h2>
+              <p>When the scene is loaded, the menu music is disabled and replaced with a desert
+                ambience looping effect. This sound helped to portray the desert environment
+                appropriately, while also not getting jarring or annoying with a repetitive song.</p>
+              <br>
+              <h2>User Interface</h2>
+              <p>The UI is displayed on the bottom left of the screen, and displays the game's
+                controls to remind the player.</p>
+                <img src="public/docpics/uipic.png" class="d-block w-50">
+              <br>
+              <br>
+              <h2>Camera</h2>
+              <p>The player camera is locked in both its height and zoom levels,
+                and can only be rotated and moved horizontally.</p>
+                <img src="public/docpics/camera.png" class="d-block w-30">
+                <br>
+                <br>
+              <h2>Environment</h2>
+              <p>The outer environment consists of rocky mountainous terrain, using a height map.
+                This is used as the backdrop to the scene, and covers the disparity between the
+                edge of the terrain and the skybox.</p>
+                <img src="public/docpics/terrain.png" class="d-block w-70">
+                <br>
+              <p>The main area of the scene consists of a flat, sandy terrain, which is a
+                collideable mesh where the gameplay takes place. This area is decorated with
+                cacti plants around the edges, which are flat png sprites that are randomly
+                generated within a set range of coordinates upon the scene's startup.</p>
+                <img src="public/docpics/cacti.png" class="d-block w-70">
+                <img src="public/docpics/cactipic.png" class="d-block w-70">
+                <br>
+                <br>
+              <h2>Arena</h2>
+              <p>In the center of the sandy terrain is the arena, where the gameplay takes place.
+                It is a rectangular area made up of walls, that contains obstacles and the goal,
+                and is where the player and ball will spawn upon the scene's startup.</p>
+                <br>
+              <h2>Walls</h2>
+              <p>The arena consists of two walls, both of them cloned and repositioned to create
+                the 4 walls of the arena that surround the player. The walls all have the same
+                yellow and black warning hazard texture applied to them, to signify that they are
+                bounds of the arena.</p>
+                <img src="public/docpics/walls.png" class="d-block w-70">
+                <img src="public/docpics/wallspic.png" class="d-block w-100">
+                <br>
+                <br>
+              <h2>Obstacles</h2>
+              <p>Inside the arena are four large immovable boxes, that act as the obstacles the
+                player must push the ball around during gameplay. These are simple box meshes,
+                with the same yellow and black hazard texture applied to them, to keep them
+                aesthetically matching with the immovable walls.</p>
+                <img src="public/docpics/obstacles.png" class="d-block w-70">
+                <img src="public/docpics/obstaclespic.png" class="d-block w-60">
+                <br>
+                <br>
+              <h2>Goal</h2>
+              <p>The goal is a long rectangular box mesh with a transparent net texture applied to it,
+                looking much like a metal wire fence. The goal has no mesh applied and both the
+                player and ball can move straight through it.</p>
+                <img src="public/docpics/goalpic.png" class="d-block w-50">
+                <br>
+                <br>
+              <h2>Game Objects</h2>
+              <h2>Player Character</h2>
+              <p>The player character is a blue dummy model that is controlled by the player using
+                the WASD keyboard buttons. The character can walk, rotate, moonwalk and sprint.</p>
+                <img src="public/docpics/playerpic.png" class="d-block w-50">
+                <br>
+                <p>The character has a capsule collider on it's mesh, which is used to collide with
+                  the ground and environment objects. The character's mesh has a mass of 10 applied
+                  to it, which allows it to push the lighter ball around the arena. The character
+                  has both walking and idle animations that play and stop when appropriate.</p>
+                  <img src="public/docpics/player1.png" class="d-block w-50">
+                  <br>
+                  <img src="public/docpics/player2.png" class="d-block w-50">
+                  <br>
+                  <br>
+                  <h2>Ball</h2>
+                  <p>The ball is the main object of the game, as it controls the win condition for
+                    the player to complete the game. The ball is a simple white sphere object, with
+                    a sphere collider applied and a mass of 2, making it lighter than the player
+                    character and easily pushed around.
+                    The ball also collides with everything in the scene except the goal. When the
+                    ball's mesh intersects with the goal's mesh, this triggers the game's win
+                    condition and the scene progresses to the win screen.</p>
+                    <img src="public/docpics/ball.png" class="d-block w-40">
+                    <br>
+                    <br>
+                    <h1>Win Screen</h1>
+                    <p>When the player has succesfully pushed the ball into the goal, the gameplay
+                      scene transitions to this screen. This screen is just a camera shot of the
+                      skybox, with cenetered UI text that lets the player know they have completed
+                      the game, and tells them how to return to the main menu.</p>
+                      <img src="public/docpics/win.png" class="d-block w-70">
+        </div>
+    </body>
+</html>
